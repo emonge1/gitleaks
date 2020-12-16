@@ -156,6 +156,21 @@ title = "gitleaks config"
 	regex = '''shppa_[a-fA-F0-9]{32}'''
 	tags = ["key", "Shopify"]
 
+[[rules]]
+	description = "Username keyword"
+	regex = '''username'''
+	tags = ["creds", "accounts"]
+
+[[rules]]
+	description = "Account keyword"
+	regex = '''account'''
+	tags = ["creds", "account"]
+
+[[rules]]
+	description = "Password keyword"
+	regex = '''password'''
+	tags = ["creds", "accounts"]
+
 [allowlist]
 	description = "Allowlisted files"
 	files = ['''^\.?gitleaks.toml$''',
