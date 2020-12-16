@@ -132,7 +132,7 @@ title = "gitleaks config"
 	tags = ["key", "twilio"]
 
 [[rules]]
-	description = "Dynatrace ttoken"
+	description = "Dynatrace token"
 	regex = '''dt0[a-zA-Z]{1}[0-9]{2}\.[A-Z0-9]{24}\.[A-Z0-9]{64}'''
 	tags = ["key", "Dynatrace"]
 
@@ -162,14 +162,19 @@ title = "gitleaks config"
 	tags = ["creds", "accounts"]
 
 [[rules]]
-	description = "Account keyword"
-	regex = '''account'''
-	tags = ["creds", "account"]
-
-[[rules]]
 	description = "Password keyword"
 	regex = '''password'''
-	tags = ["creds", "accounts"]
+	tags = ["creds", "password"]
+
+[[rules]]
+	description = "Token keyword"
+	regex = '''token'''
+	tags = ["creds", "token"]
+
+[[rules]]
+	description = "Secret keyword"
+	regex = '''secret'''
+	tags = ["creds", "secret"]
 
 [allowlist]
 	description = "Allowlisted files"
