@@ -157,13 +157,13 @@ title = "gitleaks config"
 	tags = ["key", "Shopify"]
 
 [[rules]]
-	description = "Username keyword"
-	regex = '''username'''
-	tags = ["creds", "accounts"]
-
-[[rules]]
 	description = "Password keyword"
 	regex = '''password'''
+	tags = ["creds", "password"]
+
+[[rules]]
+	description = "Username keyword"
+	regex = '''username'''
 	tags = ["creds", "password"]
 
 [[rules]]
@@ -175,6 +175,21 @@ title = "gitleaks config"
 	description = "Secret keyword"
 	regex = '''secret'''
 	tags = ["creds", "secret"]
+
+[[rules]]
+	description = "Oracle/Postgre connection data source keyword"
+	regex = '''Data Source='''
+	tags = ["db", "oracle"]	
+
+[[rules]]
+	description = "Oracle/Postgre connection data source keyword"
+	regex = '''Database='''
+	tags = ["db", "oracle"]	
+
+[[rules]]
+	description = "Oracle/Postgre connection data source keyword"
+	regex = '''dbname='''
+	tags = ["db", "oracle"]	
 
 [allowlist]
 	description = "Allowlisted files"
